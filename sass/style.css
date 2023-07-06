@@ -228,7 +228,7 @@
 }
 
 .our-services .container-our-services .text-content-service .wrapper-header-product {
-  width: 284px;
+  max-width: 284px;
 }
 
 .our-services .container-our-services .container-service-home {
@@ -250,4 +250,170 @@
   height: 197px;
   left: 78px;
   top: -15px;
+}
+
+.our-client {
+  height: 680px;
+  border-top-left-radius: 220px;
+  background-color: #5A98D0;
+  border: black solid 1px;
+  margin-top: 212px;
+}
+
+.our-client .container-our-client {
+  max-width: 940px;
+  height: 459px;
+  margin: 0 auto;
+  margin-top: 96px;
+}
+
+.our-client .container-our-client .wrapper-text-content-clients {
+  display: flex;
+  justify-content: space-between;
+  max-width: 840px;
+  height: 92px;
+}
+
+.our-client .container-our-client .wrapper-text-content-clients .header-clients {
+  max-width: 223px;
+  height: 100%;
+}
+
+.our-client .container-our-client .wrapper-text-content-clients .header-clients h2 {
+  font-family: 'GilroySemibold';
+  color: white;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 5%;
+}
+
+.our-client .container-our-client .wrapper-text-content-clients .text-content {
+  max-width: 520px;
+  height: 100%;
+}
+
+.our-client .container-our-client .wrapper-text-content-clients .text-content p {
+  font-family: 'GilroyRegular';
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 5%;
+  color: white;
+}
+
+.our-client .container-our-client .wrapper-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 100%;
+  height: 256px;
+  margin-top: 111px;
+}
+
+.our-client .container-our-client .wrapper-logos .logo-client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100%;
+}
+
+.our-client .container-our-client .wrapper-logos .more_client {
+  background-color: #4E86BB;
+}
+
+.our-client .container-our-client .wrapper-logos .more_client button {
+  font-family: 'GilroySemibold';
+  font-size: 20px;
+  border: none;
+  background-color: #4E86BB;
+  line-height: 46px;
+  color: white;
+  cursor: pointer;
+}
+
+.our-client .container-our-client .wrapper-logos .top {
+  border: solid #8cb7de 1px;
+  border-left-style: none;
+  border-top-style: none;
+}
+
+.our-client .container-our-client .wrapper-logos .top-end {
+  border-right-style: none;
+}
+
+.our-client .container-our-client .wrapper-logos .bottom {
+  border: solid #8cb7de 1px;
+  border-left-style: none;
+  border-bottom-style: none;
+}
+
+.our-client .container-our-client .wrapper-logos .bottom-end {
+  border: solid #8cb7de 1px;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+
+.feedback {
+  height: 388px;
+  background-color: #5A98D0;
+}
+
+.feedback .feedback-container {
+  display: flex;
+  justify-content: end;
+  max-width: 1310px;
+  height: 100%;
+  border-bottom-color: #8cb7de;
+}
+
+.feedback .feedback-container .wrapper-content-feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 861px;
+  height: 100%;
+}
+
+.feedback .feedback-container .wrapper-content-feedback .wrapper-text-feedback {
+  max-width: 460px;
+  height: 204px;
+}
+
+.feedback .feedback-container .wrapper-content-feedback .wrapper-text-feedback .wrapper-header-feedback {
+  width: 317px;
+  height: 92px;
+}
+
+.feedback .feedback-container .wrapper-content-feedback .wrapper-text-feedback .wrapper-header-feedback h2 {
+  font-family: 'GilroySemibold';
+  font-size: 36px;
+  color: white;
+  line-height: 46px;
+}
+
+.feedback .feedback-container .wrapper-content-feedback .wrapper-text-feedback .wrapper-undertext-feedback {
+  width: 460px;
+  height: 80px;
+  margin-top: 32px;
+}
+
+.feedback .feedback-container .wrapper-content-feedback .wrapper-text-feedback .wrapper-undertext-feedback p {
+  font-family: 'GilroyRegular';
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
+}
+
+.feedback .feedback-container .wrapper-content-feedback button {
+  width: 220px;
+  height: 56px;
+  border: black solid 1px;
+  background-color: #5A98D0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.feedback .feedback-container .wrapper-content-feedback button:hover {
+  background-color: #377fc0;
 }
