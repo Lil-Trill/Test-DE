@@ -125,9 +125,8 @@ $main-color: #5A98D0;
             width:380px;
             height: 525px;
             border-radius: 10px;
-            border:black solid 1px;
+            box-shadow: 1px 1px 25px  rgb(215, 212, 212);
         }
-
         .wrapper-header-our-servisec {
             width: 358px;
             height: 138px;
@@ -152,63 +151,108 @@ $main-color: #5A98D0;
                 margin-top: 48px;
                 margin-left: 74px;
             }
+        }
 
-            .wrapper-services-home {
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-            
-            .text-content-service{
-                width:284px;
-                height: 241px;
-                margin: 0 auto;
-                margin-top: 56px;
-                .wrapper-header-business {
-                    width:257px;
-                    height: 60px;
-                    
-                    h3 {
-                        color: $color-text-header;
-                        font-family: 'GilroySemibold';
-                        font-size: 20px;
-                        font-weight: bold;
-                        line-height: 30px;
-                        letter-spacing: 5%;
-                    }
-                }
-    
-                .wrapper-text-service {
-                    width:284px;
-                    height: 103px;
-                    margin: 0 auto;
-                    margin-top: 16px;
-    
-                    p {
-                        font-family: 'GilroyRegular';
-                        color: $color-text-header;
-                        font-size: 16px;
-                        line-height: 26px;
-                        font-weight: lighter;
-                        letter-spacing: 5%;
-                    }
-                }
+        
+        .wrapper-services-home {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
 
-                button {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background-color: white;
-                    border: none;
-                    font-family: 'GilroySemibold';
-                    font-size: 14px;
-                    line-height: 30px;
-                    letter-spacing: 5%;
-                    color: $main-color;
-                    width:127px;
-                    height: 30px;
-                    margin-top: 32px;
-                }
+        .wrapper-services-product {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            img {
+                width:182px;
+                height: 132px;
+                margin-top: 48px;
+                margin-left: 74px;
             }
         }
+
+        
+
+        .text-content-service{
+            width:284px;
+            height: 241px;
+            margin: 0 auto;
+            margin-top: 56px;
+            .wrapper-header {
+                width:257px;
+                height: 60px;
+                
+                h3 {
+                    color: $color-text-header;
+                    font-family: 'GilroySemibold';
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 30px;
+                    letter-spacing: 5%;
+                }
+            }
+
+            .wrapper-text-service {
+                width:284px;
+                height: 103px;
+                margin: 0 auto;
+                margin-top: 16px;
+
+                p {
+                    font-family: 'GilroyRegular';
+                    color: $color-text-header;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: lighter;
+                    letter-spacing: 5%;
+                }
+            }
+
+            button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border: none;
+                font-family: 'GilroySemibold';
+                font-size: 14px;
+                line-height: 30px;
+                letter-spacing: 5%;
+                color: $main-color;
+                width:127px;
+                height: 30px;
+                margin-top: 32px;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+
+            .wrapper-header-product {
+                width: 284px;
+            }
+        }
+        
+        .container-service-home {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            position: relative;
+            width: 100%;
+            height: 537px;
+        }
+
+        .text-content-service-home {
+            margin-top: 236px;
+        }
+
+        .svg-home {
+            position: absolute;
+            width:224px;
+            height: 197px;
+            left: 78px;
+            top: -15px;
+        }
     }
+
+    
 }
+
