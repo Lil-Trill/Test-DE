@@ -10,7 +10,9 @@ $main-color: #5A98D0;
 }
 
 
-
+// div {
+//     border: black solid 1px;
+// }
 
 body {
     position: relative;
@@ -27,10 +29,9 @@ p {
     line-height: 26px;
 }
 
-.conteiner-text-unvise--header {
+.svg-home-unvise {
     display: none;
 }
-
 .header-container {
     justify-content: center;
     height: 768px;
@@ -180,10 +181,23 @@ p {
         display: grid;
         grid-template-columns: 560px 1fr;
         grid-template-rows: 1fr 1fr;
-        width: 940px;
+        max-width: 940px;
         height: 1162px;
         margin: 0 auto;
         margin-top: 180px;
+
+        @media (max-width:987px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 10px;
+        }
+
+        @media (max-width:787px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 1000px;
+        }
 
         .wrapper-services {
             width:380px;
@@ -215,17 +229,41 @@ p {
                 margin-top: 48px;
                 margin-left: 74px;
             }
+            @media (max-width:787px) {
+                grid-row: 1/2;
+                margin-top: 200px;
+            }
         }
 
         
-        .wrapper-services-home {
+        .container-service-home {
             grid-column: 2/3;
             grid-row: 1/2;
+            @media (max-width:787px) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+
+            .wrapper-services-home {
+                @media (max-width:787px) {
+                    margin: 0 auto;
+                }
+            }
         }
 
         .wrapper-services-product {
             grid-column: 2/3;
             grid-row: 2/3;
+            
+            @media (max-width:787px) {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+
             img {
                 width:182px;
                 height: 132px;
@@ -277,21 +315,24 @@ p {
                 align-items: center;
                 background-color: white;
                 border: none;
-                font-family: 'GilroySemibold';
-                font-size: 14px;
-                line-height: 30px;
-                letter-spacing: 5%;
-                color: $main-color;
                 width:127px;
                 height: 30px;
                 margin-top: 32px;
+
+                p {
+                    color: $main-color;
+                    font-family: 'GilroySemibold';
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 5%;
+                }
             }
             button:hover {
                 cursor: pointer;
             }
 
             .wrapper-header-product {
-                max-width: 284px;
+                min-width: 294px;
             }
         }
         
@@ -314,6 +355,9 @@ p {
             height: 197px;
             left: 78px;
             top: -15px;
+            @media (max-width: 787px) {
+                left: 30vw;
+            }
         }
     }
 }
@@ -324,6 +368,14 @@ p {
     border: $main-color solid 1px;
     background-color: $main-color;
     margin-top: 212px;
+
+    @media (max-width:1000px) {
+        border-top-left-radius: 0px;
+    }
+
+    @media (max-width:787px) {
+        margin-top: 1112px;
+    }
     .container-our-client {
         max-width:940px;
         height: 459px;
@@ -433,18 +485,30 @@ p {
         border-top-style: none;
         border-left-style: none;
         border-right-style: none;
+
+        @media (min-width:2100px) {
+            max-width: 100%;
+            justify-content: center;
+        }
+
         .wrapper-content-feedback {
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-width: 861px;
+            width: 861px;
             height: 100%;
+
+            @media (max-width: 930px) {
+                max-width: 100%;
+            }
 
             .wrapper-text-feedback {
                 max-width:460px;
                 height: 204px;
-
+                @media (max-width:600px) {
+                    max-width: 217px;
+                }
                 .wrapper-header-feedback {
                     width:317px;
                     height: 92px;
@@ -453,6 +517,9 @@ p {
                         font-size: 36px;
                         color: white;
                         line-height: 46px;
+                    }
+                    @media (max-width:600px) {
+                        max-width: 217px;
                     }
                 }
 
@@ -465,6 +532,10 @@ p {
                         font-size: 16px;
                         color: white;
                         line-height: 26px;
+                    }
+                    @media (max-width:600px) {
+                        margin-top: 45px;
+                        max-width: 217px;
                     }
                 }
             }
@@ -482,6 +553,15 @@ p {
                 color: white;
                 line-height: 26px;
                 cursor: pointer;
+
+                @media (max-width: 1350px) {
+                    background-color: adjust-color($main-color, $lightness: 20%);
+                }
+
+                @media (max-width: 890px) {
+                    width: 100px;
+                    height: 50px;
+                }
             }
 
             button:hover {
@@ -501,6 +581,11 @@ p {
         align-items: center;
         max-width: 1600px;
         height: 100%;
+
+        @media (min-width:2100px) {
+            max-width: 100%;
+            justify-content: center;
+        }
 
         .wrapper-content-footer {
             z-index: 100;
@@ -566,6 +651,16 @@ p {
                 }
             }
 
+            @media (max-width:500px) {
+                .about-us {
+                    display: none;
+                }
+
+                .follow-us {
+                    display: none;
+                }
+            }
+
             .about-us {
                 
             }
@@ -584,4 +679,31 @@ p {
     background-color: #316099;
     border-top-right-radius:220px;
     bottom: 0;
+
+    @media (max-width: 1770px) {
+        max-width: 1600px;
+    }
+    @media (max-width: 1600px) {
+        max-width: 1350px;
+    }
+
+    @media (max-width: 1350px) {
+        max-width: 1150px;
+    }
+
+    @media (max-width: 1150px) {
+        max-width: 900px;
+    }
+
+    @media (max-width: 900px) {
+        max-width: 700px;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 500px;
+    }
+
+    @media (max-width: 500px) {
+        max-width: 300px;
+    }
 }
