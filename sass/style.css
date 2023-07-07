@@ -6,19 +6,27 @@
   padding: 0;
 }
 
+body {
+  position: relative;
+}
+
+h1 {
+  color: #1F3F68;
+}
+
+p {
+  color: #1F3F68;
+  font-family: 'GilroyRegular';
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
+}
+
 .header-container {
   justify-content: center;
   height: 768px;
   background: white;
   background: linear-gradient(180deg, white 65%, #ebeafa 100%);
-}
-
-.header-container h1 {
-  color: #1F3F68;
-}
-
-.header-container p {
-  color: #1F3F68;
 }
 
 .header-container .navigation {
@@ -101,10 +109,6 @@
     margin-right: 0;
     margin: 0 auto;
   }
-}
-
-.our-services {
-  border: black solid 1px;
 }
 
 .our-services .container-our-services {
@@ -255,8 +259,8 @@
 .our-client {
   height: 680px;
   border-top-left-radius: 220px;
+  border: #5A98D0 solid 1px;
   background-color: #5A98D0;
-  border: black solid 1px;
   margin-top: 212px;
 }
 
@@ -364,10 +368,14 @@
   justify-content: end;
   max-width: 1310px;
   height: 100%;
-  border-bottom-color: #8cb7de;
+  border: #8cb7de 1px solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
 }
 
 .feedback .feedback-container .wrapper-content-feedback {
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -408,12 +416,116 @@
 .feedback .feedback-container .wrapper-content-feedback button {
   width: 220px;
   height: 56px;
-  border: black solid 1px;
+  border: none;
   background-color: #5A98D0;
+  color: white;
   border-radius: 10px;
+  color: #1F3F68;
+  font-family: 'GilroyRegular';
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
   cursor: pointer;
 }
 
 .feedback .feedback-container .wrapper-content-feedback button:hover {
   background-color: #377fc0;
+}
+
+.section-footer {
+  height: 478px;
+  background-color: #5A98D0;
+}
+
+.section-footer .container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  height: 100%;
+}
+
+.section-footer .container-footer .wrapper-content-footer {
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  width: 737px;
+  height: 317px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 288px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-logo-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 189px;
+  height: 32px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-logo-footer p {
+  font-family: 'GilroySemibold';
+  font-size: 28px;
+  color: white;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-text-contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 238px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-text-contact-information .wrapper-description {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-text-contact-information .wrapper-description .text-description {
+  width: 227px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .contact-information .wrapper-text-contact-information .copyright {
+  color: #7898BD;
+}
+
+.section-footer .container-footer .wrapper-content-footer .wrapper-header-footer p {
+  font-family: 'GilroySemibold';
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 5%;
+}
+
+.section-footer .container-footer .wrapper-content-footer .wrapper-text-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 152px;
+  margin-top: 32px;
+}
+
+.section-footer .container-footer .wrapper-content-footer .wrapper-text-footer a {
+  text-decoration: none;
+}
+
+.background {
+  position: absolute;
+  width: 1770px;
+  height: 869px;
+  background-color: #316099;
+  border-top-right-radius: 220px;
+  bottom: 0;
+  z-index: 0;
+}
+
+@media (max-width: 1360px) {
+  .container--image svg {
+    width: 400px;
+    height: 400px;
+  }
 }

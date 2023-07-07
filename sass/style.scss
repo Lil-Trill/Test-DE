@@ -13,16 +13,22 @@ $main-color: #5A98D0;
 //     border: black solid 1px;
 // }
 
+body {
+    position: relative;
+}
+
+h1 {
+    color: $color-text-header;
+}
+p {
+    color: $color-text-header;
+    font-family: 'GilroyRegular';
+    font-size: 16px;
+    color: white;
+    line-height: 26px;
+}
+
 .header-container {
-    h1 {
-        color: $color-text-header;
-    }
-    p {
-        color: $color-text-header;
-    }
-
-
-
     justify-content: center;
     height: 768px;
     background: rgb(255,255,255);
@@ -107,7 +113,6 @@ $main-color: #5A98D0;
 }
 
 .our-services {
-border: black solid 1px;
     .container-our-services {
         display: grid;
         grid-template-columns: 560px 1fr;
@@ -253,8 +258,8 @@ border: black solid 1px;
 .our-client {
     height: 680px;
     border-top-left-radius:220px;
+    border: $main-color solid 1px;
     background-color: $main-color;
-    border: black solid 1px;
     margin-top: 212px;
     .container-our-client {
         max-width:940px;
@@ -360,8 +365,12 @@ border: black solid 1px;
         justify-content: end;
         max-width: 1310px;
         height: 100%;
-        border-bottom-color: #8cb7de;
+        border: #8cb7de 1px solid;
+        border-top-style: none;
+        border-left-style: none;
+        border-right-style: none;
         .wrapper-content-feedback {
+            z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -399,15 +408,127 @@ border: black solid 1px;
             button {
                 width:220px;
                 height: 56px;
-                border: black solid 1px;
+                border: none;
                 background-color: $main-color;
+                color:white;
                 border-radius: 10px;
+                color: $color-text-header;
+                font-family: 'GilroyRegular';
+                font-size: 16px;
+                color: white;
+                line-height: 26px;
                 cursor: pointer;
             }
 
             button:hover {
                 background-color: adjust-color($main-color, $lightness: -10%);
             }
+        }
+    }
+}
+
+.section-footer {
+    height: 478px;
+    background-color: $main-color;
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1600px;
+        height: 100%;
+
+        .wrapper-content-footer {
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            width: 737px;
+            height: 317px;
+
+            .contact-information {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 288px;
+
+                .wrapper-logo-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 189px;
+                    height: 32px;
+                    p {
+                        font-family: 'GilroySemibold';
+                        font-size: 28px;
+                        color: white;
+                    }
+                }
+                .wrapper-text-contact-information {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 238px;
+
+                    .wrapper-description {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 48px;
+
+                        .text-description {
+                            width: 227px;
+                        }
+                    }
+                    .copyright {
+                        color: #7898BD;
+                    }
+                }
+            }
+
+            .wrapper-header-footer {
+                p {
+                    font-family: 'GilroySemibold';
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 5%;
+                }
+            }
+            .wrapper-text-footer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 152px;
+                margin-top: 32px;
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .about-us {
+                
+            }
+
+            .follow-us {
+
+            }
+        }
+    }
+}
+
+.background {
+    position: absolute;
+    width: 1770px;
+    height: 869px;
+    background-color: #316099;
+    border-top-right-radius:220px;
+    bottom: 0;
+    z-index: 0;
+}
+
+
+@media (max-width:1360px) {
+    .container--image {
+        svg {
+            width: 400px;
+            height: 400px;
         }
     }
 }
