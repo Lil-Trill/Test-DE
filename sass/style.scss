@@ -9,9 +9,8 @@ $main-color: #5A98D0;
   padding: 0;
 }
 
-// div {
-//     border: black solid 1px;
-// }
+
+
 
 body {
     position: relative;
@@ -26,6 +25,10 @@ p {
     font-size: 16px;
     color: white;
     line-height: 26px;
+}
+
+.conteiner-text-unvise--header {
+    display: none;
 }
 
 .header-container {
@@ -59,12 +62,38 @@ p {
             position: relative;
             display: flex;
             justify-content:end;
-            width: 1172px;
+            max-width: 1172px;
             margin-right: 300px;
+
+            @media (max-width:470px) {
+                max-width: 100%;
+            }
             .container--image {
                 width: 687px;
                 height: 612px;
+
+                @media (max-width:1150px) {
+                    display: none;
+                    height: 306px;
+                }
             }
+            .conteiner-text--header {
+                max-width: 543px;
+                @media (max-width:1360px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                @media (max-width:1150px) {
+                    align-items: center;
+                    margin-top: 110px;
+                }
+
+                @media (max-width:470px) {
+                    max-width: 100%;
+                }
+            }
+
             .header-text {
                 position: absolute;
                 right: 620px;
@@ -72,36 +101,70 @@ p {
                 width:550px;
                 height: 148px;
                 h1 {
-                    font-size: 64px;
+                    $size-header: 64px;
+                    font-size: $size-header;
                     line-height: 74px;
-                }
 
-                .text-block {
-                    width:425px;
-                    height: 82px;
-                    margin-top: 32px;
+                    @media (max-width:1360px) {
+                        font-size: $size-header*0.8;
+                    }
 
-                    P {
-                        font-size: 16px;
-                        line-height: 26px;
-                        letter-spacing: 5%;
-                        font-family: 'GilroyRegular';
+                    @media (max-width:445px) {
+                        font-size: $size-header*0.6;
+
                     }
                 }
 
-                button {
-                    border: none;
-                    width:220px;
-                    height: 56px;
-                    border-radius: 10px;
-                    background-color: $main-color;
+                @media (max-width:1360px) {
+                    position: static;
+                    max-width:450px;
+                }
+                @media (max-width:470px) {
+                    text-align: center;
+                    max-width: 100%;
+                }
+
+                
+            }
+            .text-block {
+                width:425px;
+                height: 82px;
+                margin-top: 300px;
+
+                P {
+                    color: $color-text-header;
                     font-size: 16px;
-                    margin-top: 71px;
-                    color: white;
+                    line-height: 26px;
+                    letter-spacing: 5%;
+                    font-family: 'GilroyRegular';
                 }
-                button:hover{
-                    background-color: adjust-color($main-color, $lightness: -10%);
+                @media (max-width:1360px) {
+                    margin-top: 10px;
                 }
+                @media (max-width:470px) {
+                    max-width: 100%;
+                    margin-top: 20px;
+                    height: 100px;
+                    text-align: center;
+                }
+            }
+
+            button {
+                border: none;
+                width:220px;
+                height: 56px;
+                border-radius: 10px;
+                background-color: $main-color;
+                font-family: 'GilroyRegular';
+                font-size: 16px;
+                margin-top: 71px;
+                color: white;
+                @media (max-width:470px) {
+                    max-width: 100%;
+                }
+            }
+            button:hover{
+                background-color: adjust-color($main-color, $lightness: -10%);
             }
             @media (max-width: 1830px) {
                 margin-right: 0;
@@ -361,6 +424,7 @@ p {
     background-color: $main-color;
 
     .feedback-container {
+        z-index: 100;
         display: flex;
         justify-content: end;
         max-width: 1310px;
@@ -520,15 +584,4 @@ p {
     background-color: #316099;
     border-top-right-radius:220px;
     bottom: 0;
-    z-index: 0;
-}
-
-
-@media (max-width:1360px) {
-    .container--image {
-        svg {
-            width: 400px;
-            height: 400px;
-        }
-    }
 }
