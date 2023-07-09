@@ -1,4 +1,3 @@
-const btnSubmit = document.getElementById("submit");
 const formFedback = document.getElementById("form-fedback");
 const filedFullName = document.querySelector(".full-name");
 const email = document.querySelector(".email");
@@ -10,28 +9,27 @@ formFedback.addEventListener('submit',(event)=>{
     let formData = new FormData(formFedback);
     let xhr = new XMLHttpRequest();
     let result = checkFields(formData);
-    
     if(result) {
         xhr.open("get","api/receiveMessage.php");
         xhr.send(formData);
         xhr.onload = () => {
             if(xhr.response==="ok"){
-                
+               sendMessage("Your message successfully sent");
+            }
+            else {
+                sendMessage("your message was not sent");
             }
         }
     }
-
+    document.querySelector('.submit-button').setAttribute('disabled', '');
 });
 
-// async function formSend(formData){
-//     let response = await fetch("api/receiveMessage.php",{
-//         method:'POST',
-//         body: formData
-//     });
-//     if(response.ok) {
-//         console.log("данные отпавлены");
-//     }
-// }
+function sendMessage(message){
+    let info = document.createElement('p');
+    info.classList.add("info")
+    info.innerHTML = message;
+    content.append(info);
+}
 
 function checkFields(formData){
     let flag = true;
