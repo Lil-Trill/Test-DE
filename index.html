@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="sass/reset.css">
     <link rel="stylesheet" href="sass/style.css">
     <link rel="stylesheet" href="sass/fonts.css">
-    <link rel="stylesheet" href="sass/adaptive.css">
+    <script defer src="js/open-close-modal.js"></script>
+    <script defer src="js/pushMessage.js"></script>
 </head>
 <body>
     <header>
@@ -459,5 +460,39 @@
     <div class="background">
         
     </div>
+
+        <div id="modal" class="wrapper-modal-window">
+            <form action="">
+
+            </form>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <div class="wrapper-content">
+                        <div class="popup__title">
+                            <h1>SEND US MESSAGE</h1>
+                        </div>
+                        <form id="form-feddback" action="">
+                            <label for=""><p>Full Name</p></label>
+                            <div class="wrapper-input full-name">
+                                <input type="text" name="full-name" id="full-name--field" placeholder="Full Name">
+                            </div>
+
+                            <div class="wrapper-input email">
+                                <input type="email" name="email" id="email--field" placeholder="Your Email">
+                            </div>
+                            <div class="wrapper-input message">
+                                <input type="text" name="message" id="message--field" placeholder="Your Message">
+                            </div>
+                            <input type="submit" name="sumbit" id="submit" value="submit">
+                        </form>
+                        <p class="popup__close">X</p>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
 </body>
 </html>
