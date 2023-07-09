@@ -23,7 +23,3 @@ function Close(){
     modalWindow.classList.remove('open');
     document.body.style.overflow ='scroll';
 }
-
-document.getElementById("submit").addEventListener('click',(event)=>{
-    
-});
