@@ -20,8 +20,9 @@ formFedback.addEventListener('submit',(event)=>{
                 sendMessage("your message was not sent");
             }
         }
+        document.querySelector('.submit-button').setAttribute('disabled', '');
     }
-    document.querySelector('.submit-button').setAttribute('disabled', '');
+    
 });
 
 function sendMessage(message){
